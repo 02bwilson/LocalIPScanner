@@ -54,6 +54,7 @@ public class Mainframe extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("IP Scanner");
         setForeground(java.awt.Color.black);
         setName("mainframe"); // NOI18N
         setResizable(false);
