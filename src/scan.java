@@ -5,6 +5,7 @@ import java.io.*;
 public class scan {
     public static ArrayList<String> scanPorts(String gateway, int sp, int ep){
         InetAddress address; 
+        ArrayList<String> a = new ArrayList<>();
         // Handles if user input makes the end port larger then start port
         if (ep > sp){
             int tempPort = sp;
@@ -15,15 +16,19 @@ public class scan {
         for (int i = sp; i < ep; i++){
             try {
                 address = InetAddress.getByName(gateway + String.valueOf(i));
+                a.add("Found");
+                System.out.print("Found");
             } 
             catch (UnknownHostException e){
                 System.out.println(e.toString());
+                a.add("Not Found");
+                System.out.print("Not Found");
             }
         }
        
  
-        ArrayList<String> a = new ArrayList<>(); 
-        a.add("b");
+         
+        
         return a;
     }
 }
